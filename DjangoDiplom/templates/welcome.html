@@ -1,0 +1,141 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+
+        .center-img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative; 
+            width: 80%; 
+            height: auto; 
+        }
+     
+        .icon {
+            position: absolute;
+            width: 20px; 
+            height: 20px;
+        }
+
+        /* Добавляем стили для контейнера страницы */
+        body {
+            height: 100vh; 
+            padding-top: 20px; 
+        }
+
+        /* Стили для контейнера с заголовком и текстом */
+        .container {
+            padding: 20px; /* Добавляем внутренний отступ */
+        }
+
+        /* Стили для заголовка */
+        h1 {
+            color: #333; /* Цвет текста */
+            text-align: center; /* Выравнивание текста по центру */
+        }
+
+        /* Стили для текста */
+        p {
+            color: #555; /* Цвет текста */
+            text-align: center; /* Выравнивание текста по центру */
+        }
+
+        /* Стили для отображения текста при наведении на иконку */
+        .icon a:hover::after {
+     
+            content: attr(title); /* Добавляем текст из атрибута title */
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.9); /* Фон текста */
+            padding: 5px; /* Отступы вокруг текста */
+            border-radius: 5px; /* Скругление углов */
+            left: 25px; /* Позиция текста относительно иконки */
+            top: 25px; /* Позиция текста относительно иконки */
+            z-index: 1; /* Поднимаем текст над иконкой */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Выпускная квалификационная работа на тему "Оказание энергетических услуг"</h1>
+        
+
+        <div class="text-center" style="position: relative;">
+            <img src="{% static 'Map_test.webp' %}" alt="Карта России" class="center-img">
+
+            <a href="SZFO.html" title="Северо-западный федеральный округ">
+                <div class="icon" style="left: 27%; top: 51%; color: black"> 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                        <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                    </svg>
+                </div>
+            </a>
+            <a href="PFO.html" title="Приволжский федеральный округ">
+                <div class="icon" style="left: 27%; top: 67%; color: black"> 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                        <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                    </svg>
+                </div>
+            </a>
+            <a href="CFO.html" title="Центральный федеральный округ">
+                <div class="icon" style="left: 20%; top: 60%; color: black"> 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                        <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                    </svg>
+                </div>
+            </a>
+            <a href="UFO.html" title="Южный федеральный округ">
+                <div class="icon" style="left: 16%; top: 72%; color: black"> 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                        <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                    </svg>
+                </div>
+            </a>
+            <a href="SKFO.html" title="Северо-кавказский федеральный округ">
+                <div class="icon" style="left: 16%; top: 82%; color: black"> 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                        <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                    </svg>
+                </div>
+            </a>
+            <a href="YFO.html" title="Уральский федеральный округ">
+                <div class="icon" style="left: 40%; top: 60%; color: black"> 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                        <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                    </svg>
+                </div>
+            </a>
+            <a href="SFO.html" title="Сибирский федеральный округ">
+                <div class="icon" style="left: 52%; top: 64%; color: black"> 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                        <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                    </svg>
+                </div>
+            </a>
+            <a href="DFO.html" title="Дальневосточный федеральный округ">
+                <div class="icon" style="left: 68%; top: 50%; color: black">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                        <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                    </svg>
+                </div>
+            </a>
+
+        </div>
+    </div>
+    <p>Загрузите файлы с Федеральными округами, Субъектами и ценами</p>
+    <form style="text-align: center;" action="{% url 'upload_file' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="file">
+        <button type="submit">Upload</button>
+    </form>
+</body>
+    <!-- Подключаем скрипт Bootstrap JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

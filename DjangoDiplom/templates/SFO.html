@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SFO Data</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+    <h2 class="mt-5 mb-4" style="display: inline-block;">Сибирский федеральный округ</h2>
+<button class="return-button" style="margin-left: 10px; background-color: dimgray; color: white;" onclick="window.location.href = '/';">Вернуться на карту</button>
+
+        <table class="table table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Название региона</th>
+                    <th>Производство млн.кВт/ч</th>
+                    <th>Потребление млн.кВт/ч</th>
+                    <th>Статус</th>
+                    <th>Цена за кВт/ч</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for subject in sfo_subjects %}
+                <tr>
+                    <td>{{ subject.name }}</td>
+                    <td>{{ subject.production }}</td>
+                    <td>{{ subject.consumption }}</td>
+                    <td>
+                        {% if subject.production > subject.consumption %}
+                            Производитель
+                        {% elif subject.production < subject.consumption %}
+                            Потребитель
+                        {% else %}
+                            Самодостаточный
+                        {% endif %}
+                    </td>
+                    <td>
+                        {% for key, value in sfo_prices.items %}
+                            {% if key == subject.id %}
+                                {{ value }}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        
+                    <tr>
+                <th>Итог по федеральному округу</th>
+                <th>{{ sfo_data.production }}</th>
+                <th>{{ sfo_data.consumption }}</th>
+            </tr>
+        
+        </table>
+    </div>
+</body>
+</html>
